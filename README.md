@@ -28,7 +28,7 @@ You can check the demo project to get the basics of the framework.
 Simply make your view controller extend APFancyPagerViewController and also implement the data source and optionally the delegate.
 
 ## Preview
-[![App Preview](https://raw.githubusercontent.com/AppsComTr/APFancyPager/master/docs/appvideo.gif)](https://raw.githubusercontent.com/AppsComTr/APFancyPager/master/docs/appvideo.gif)
+<img src="https://raw.githubusercontent.com/AppsComTr/APFancyPager/master/docs/appvideo.gif" width="200">
 
 
 ## License
