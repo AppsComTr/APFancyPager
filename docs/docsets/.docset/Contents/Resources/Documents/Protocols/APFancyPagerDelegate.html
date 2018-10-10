@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>APFancyPagerDelegate Protocol Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Protocol/APFancyPagerDelegate" class="dashAnchor"></a>
+    <a title="APFancyPagerDelegate Protocol Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html"> Docs</a> (100% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html"> Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        APFancyPagerDelegate Protocol Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/APFancyPagerViewController.html">APFancyPagerViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/s:12APFancyPager4UtilC">Util</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/APFancyPagerDataSource.html">APFancyPagerDataSource</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/APFancyPagerDelegate.html">APFancyPagerDelegate</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>APFancyPagerDelegate</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">APFancyPagerDelegate</span> <span class="p">:</span> <span class="kt">AnyObject</span></code></pre>
+
+                </div>
+              </div>
+            <p>Delegate protocol for APFancyPager</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@APFancyPager@objc(pl)APFancyPagerDelegate(im)fancyPagerViewController:isScrollingFromIndex:toIndex:progress:"></a>
+                    <a name="//apple_ref/swift/Method/fancyPagerViewController(_:isScrollingFromIndex:toIndex:progress:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@APFancyPager@objc(pl)APFancyPagerDelegate(im)fancyPagerViewController:isScrollingFromIndex:toIndex:progress:">fancyPagerViewController(_:isScrollingFromIndex:toIndex:progress:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>You can implement this function in order to get information while the user is scrolling through the APFancyPager.</p>
+
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">fancyPagerViewController</span><span class="p">(</span><span class="n">_</span> <span class="nv">fancyPagerViewController</span><span class="p">:</span> <span class="kt"><a href="../Classes/APFancyPagerViewController.html">APFancyPagerViewController</a></span><span class="p">,</span> <span class="n">isScrollingFromIndex</span> <span class="nv">fromIndex</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">toIndex</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">progress</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>fancyPagerViewController</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>APFancyPagerViewController object of currently using.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>isScrollingFromIndex</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Index parameter that user started to scrolling <strong>from</strong> in the APFancyPager.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>toIndex</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Index parameter that user started to scrolling <strong>to</strong> in the APFancyPager.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>progress</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Progress of the scrolling.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@APFancyPager@objc(pl)APFancyPagerDelegate(im)fancyPagerViewController:didScrollToIndex:"></a>
+                    <a name="//apple_ref/swift/Method/fancyPagerViewController(_:didScrollToIndex:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@APFancyPager@objc(pl)APFancyPagerDelegate(im)fancyPagerViewController:didScrollToIndex:">fancyPagerViewController(_:didScrollToIndex:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>You can implement this function in order to get information when the user did scroll successfully through the APFancyPager.</p>
+
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">fancyPagerViewController</span><span class="p">(</span><span class="n">_</span> <span class="nv">fancyPagerViewController</span><span class="p">:</span> <span class="kt"><a href="../Classes/APFancyPagerViewController.html">APFancyPagerViewController</a></span><span class="p">,</span> <span class="n">didScrollToIndex</span> <span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>fancyPagerViewController</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>APFancyPagerViewController object of currently using.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>didScrollToIndex</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Index parameter that user scrolled in the APFancyPager.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2018 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2018-09-21)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

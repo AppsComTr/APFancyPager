@@ -1,0 +1,11 @@
+framework module APFancyPager {
+  umbrella header "APFancyPager.h"
+
+  export *
+  module * { export * }
+}
+
+module APFancyPager.Swift {
+    header "APFancyPager-Swift.h"
+    requires objc
+}
