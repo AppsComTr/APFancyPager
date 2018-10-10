@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>APFancyPagerDataSource Protocol Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Protocol/APFancyPagerDataSource" class="dashAnchor"></a>
+    <a title="APFancyPagerDataSource Protocol Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">APFancyPager Docs</a> (100% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">APFancyPager Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        APFancyPagerDataSource Protocol Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/APFancyPagerViewController.html">APFancyPagerViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/s:12APFancyPager4UtilC">Util</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/APFancyPagerDataSource.html">APFancyPagerDataSource</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/APFancyPagerDelegate.html">APFancyPagerDelegate</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>APFancyPagerDataSource</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">APFancyPagerDataSource</span> <span class="p">:</span> <span class="kt">AnyObject</span></code></pre>
+
+                </div>
+              </div>
+            <p>Data source protocol for APFancyPager</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@APFancyPager@objc(pl)APFancyPagerDataSource(im)numberOfViewControllers:"></a>
+                    <a name="//apple_ref/swift/Method/numberOfViewControllers(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@APFancyPager@objc(pl)APFancyPagerDataSource(im)numberOfViewControllers:">numberOfViewControllers(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>You should implement this function in order to tell the number of your view controllers that will be used in the APFancyPager.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">numberOfViewControllers</span><span class="p">(</span><span class="n">_</span> <span class="nv">fancyPagerViewController</span><span class="p">:</span> <span class="kt"><a href="../Classes/APFancyPagerViewController.html">APFancyPagerViewController</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>fancyPagerViewController</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>APFancyPagerViewController object of currently using.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Number of view controllers that will be used in the APFancyPager</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@APFancyPager@objc(pl)APFancyPagerDataSource(im)fancyPagerViewController:viewControllerForIndex:"></a>
+                    <a name="//apple_ref/swift/Method/fancyPagerViewController(_:viewControllerForIndex:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@APFancyPager@objc(pl)APFancyPagerDataSource(im)fancyPagerViewController:viewControllerForIndex:">fancyPagerViewController(_:viewControllerForIndex:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>You should implement this function in order to tell the view controllers that will be used in the APFancyPager.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">fancyPagerViewController</span><span class="p">(</span><span class="n">_</span> <span class="nv">fancyPagerViewController</span><span class="p">:</span> <span class="kt"><a href="../Classes/APFancyPagerViewController.html">APFancyPagerViewController</a></span><span class="p">,</span> <span class="n">viewControllerForIndex</span> <span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UIViewController</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>fancyPagerViewController</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>APFancyPagerViewController object of currently using.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>viewControllerForIndex</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Index parameter of the view controller that will be used in the APFancyPager.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>View controller that will be used in the APFancyPager</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@APFancyPager@objc(pl)APFancyPagerDataSource(im)heightForHeader:"></a>
+                    <a name="//apple_ref/swift/Method/heightForHeader(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@APFancyPager@objc(pl)APFancyPagerDataSource(im)heightForHeader:">heightForHeader(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>You should implement this function in order to tell the header height of the APFancyPager.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">heightForHeader</span><span class="p">(</span><span class="n">_</span> <span class="nv">fancyPagerViewController</span><span class="p">:</span> <span class="kt"><a href="../Classes/APFancyPagerViewController.html">APFancyPagerViewController</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CGFloat</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>fancyPagerViewController</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>APFancyPagerViewController object of currently using.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Header height of the APFancyPager</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@APFancyPager@objc(pl)APFancyPagerDataSource(im)fancyPagerViewController:headerStringForIndex:"></a>
+                    <a name="//apple_ref/swift/Method/fancyPagerViewController(_:headerStringForIndex:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@APFancyPager@objc(pl)APFancyPagerDataSource(im)fancyPagerViewController:headerStringForIndex:">fancyPagerViewController(_:headerStringForIndex:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>You should implement this function in order to tell the header string at the given index of the APFancyPager.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">fancyPagerViewController</span><span class="p">(</span><span class="n">_</span> <span class="nv">fancyPagerViewController</span><span class="p">:</span> <span class="kt"><a href="../Classes/APFancyPagerViewController.html">APFancyPagerViewController</a></span><span class="p">,</span> <span class="n">headerStringForIndex</span> <span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>fancyPagerViewController</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>APFancyPagerViewController object of currently using.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>headerStringForIndex</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Index parameter of the header that used in the APFancyPager.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Header string of the given index of the APFancyPager</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@APFancyPager@objc(pl)APFancyPagerDataSource(im)fancyPagerViewController:headerBackgroundColorForIndex:"></a>
+                    <a name="//apple_ref/swift/Method/fancyPagerViewController(_:headerBackgroundColorForIndex:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@APFancyPager@objc(pl)APFancyPagerDataSource(im)fancyPagerViewController:headerBackgroundColorForIndex:">fancyPagerViewController(_:headerBackgroundColorForIndex:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>You should implement this function in order to tell the header background color at the given index of the APFancyPager.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">fancyPagerViewController</span><span class="p">(</span><span class="n">_</span> <span class="nv">fancyPagerViewController</span><span class="p">:</span> <span class="kt"><a href="../Classes/APFancyPagerViewController.html">APFancyPagerViewController</a></span><span class="p">,</span> <span class="n">headerBackgroundColorForIndex</span> <span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UIColor</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>fancyPagerViewController</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>APFancyPagerViewController object of currently using.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>headerBackgroundColorForIndex</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Index parameter of the header that used in the APFancyPager.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Header background color of the given index of the APFancyPager</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@APFancyPager@objc(pl)APFancyPagerDataSource(im)fancyPagerViewController:headerTextColorForIndex:"></a>
+                    <a name="//apple_ref/swift/Method/fancyPagerViewController(_:headerTextColorForIndex:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@APFancyPager@objc(pl)APFancyPagerDataSource(im)fancyPagerViewController:headerTextColorForIndex:">fancyPagerViewController(_:headerTextColorForIndex:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>You should implement this function in order to tell the header text color at the given index of the APFancyPager.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">fancyPagerViewController</span><span class="p">(</span><span class="n">_</span> <span class="nv">fancyPagerViewController</span><span class="p">:</span> <span class="kt"><a href="../Classes/APFancyPagerViewController.html">APFancyPagerViewController</a></span><span class="p">,</span> <span class="n">headerTextColorForIndex</span> <span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UIColor</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>fancyPagerViewController</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>APFancyPagerViewController object of currently using.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>headerTextColorForIndex</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Index parameter of the header that used in the APFancyPager.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Header text color of the given index of the APFancyPager</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2018 <a class="link" href="https://github.com/AppsComTr/APFancyPager" target="_blank" rel="external">Orhun Mert Simsek</a>. All rights reserved. (Last updated: 2018-10-10)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
