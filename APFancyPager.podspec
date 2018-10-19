@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "APFancyPager"
-  s.version      = "1.0"
+  s.version      = "1.1"
   s.summary      = "A fancy pager view controller framework for Swift/Objective-C"
   s.description  = <<-DESC
             A fancy pager view controller framework for Swift/Objective-C
