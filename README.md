@@ -27,6 +27,48 @@ You can check the demo project to get the basics of the framework.
 
 Simply make your view controller extend APFancyPagerViewController and also implement the data source and optionally the delegate.
 
+
+You should use the below data source function in order to specify the number of pages that APFancyPager will show.
+```
+func numberOfViewControllers(in fancyPagerViewController: APFancyPagerViewController) -> Int {
+        return pages.count
+}
+```
+
+Also you should return your desired header height from the data source function below.
+
+```
+func heightForHeader(_ fancyPagerViewController: APFancyPagerViewController) -> CGFloat {
+        return 100.0
+}
+```
+
+You should return related view controller into pages by using `fancyPagerViewController(_ fancyPagerViewController: APFancyPagerViewController, viewControllerForIndex index: Int) -> UIViewController`
+Just return your view controller for related index.
+
+You want to show header titles for your fancy pager, don't you? Here, use below data source function o achieve this:
+```
+func fancyPagerViewController(_ fancyPagerViewController: APFancyPagerViewController, headerStringForIndex index: Int) -> String
+```
+
+For the text color of the header at index this:
+
+```
+func fancyPagerViewController(_ fancyPagerViewController: APFancyPagerViewController, headerTextColorForIndex index: Int) -> UIColor
+```
+
+and for the background color at index, this:
+```
+func fancyPagerViewController(_ fancyPagerViewController: APFancyPagerViewController, headerBackgroundColorForIndex index: Int) -> UIColor
+```
+
+There are 2 delegate functions which are `func fancyPagerViewController(_ fancyPagerViewController: APFancyPagerViewController, didScrollToIndex index: Int)` and `func fancyPagerViewController(_ fancyPagerViewController: APFancyPagerViewController, isScrollingFromIndex fromIndex: Int, toIndex: Int, progress: CGFloat)`. You can use them to get some useful (maybe not useful that much) informations about the APFancyPager.
+
+The last but not least, you can use an extra function to scroll the APFancyPager to the any index directly. To achieve this, simply use below function:
+```
+func scrollToPage(_ pageNumber: Int, animated: Bool)
+```
+
 ## Preview
 <img src="https://raw.githubusercontent.com/AppsComTr/APFancyPager/master/docs/appvideo.gif" width="200">
 
