@@ -10,7 +10,6 @@ import UIKit
 
 /// Our almighty class which is simply a UIViewController. Everything starts by using this view controller.
 open class APFancyPagerViewController: UIViewController, UIScrollViewDelegate {
-    
     /// Delegate variable, you don't have to set this.
     open weak var delegate: APFancyPagerDelegate?
     /// Datasource variable, you have to set this.
@@ -29,7 +28,7 @@ open class APFancyPagerViewController: UIViewController, UIScrollViewDelegate {
     private var numberOfControllers: Int!
     /// This variable used for detection of the scroll direction.
     private var lastPercentage: CGFloat = 0.0
-
+    
     /// Some initialization codes.
     public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -44,9 +43,9 @@ open class APFancyPagerViewController: UIViewController, UIScrollViewDelegate {
     open override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.backgroundColor = UIColor.white
+        view.backgroundColor = UIColor.white
         
-        if (dataSource == nil) {
+        if dataSource == nil {
             return
         }
         
@@ -57,9 +56,9 @@ open class APFancyPagerViewController: UIViewController, UIScrollViewDelegate {
     private func initializeViews() {
         reloadData()
         
-        headerContainerView.frame = CGRect(x: 0.0, y: 0.0, width: self.view.bounds.width, height: headerHeight)
+        headerContainerView.frame = CGRect(x: 0.0, y: 0.0, width: view.bounds.width, height: headerHeight)
         headerContainerView.backgroundColor = dataSource!.fancyPagerViewController(self, headerBackgroundColorForIndex: 0)
-        self.view.addSubview(headerContainerView)
+        view.addSubview(headerContainerView)
         
         headerTitleLabel.frame = CGRect(x: 0, y: Util.statusBarHeight(), width: headerContainerView.bounds.width, height: headerContainerView.frame.height - Util.statusBarHeight())
         headerTitleLabel.text = dataSource!.fancyPagerViewController(self, headerStringForIndex: 0)
@@ -70,15 +69,14 @@ open class APFancyPagerViewController: UIViewController, UIScrollViewDelegate {
         headerTitleLabel.adjustsFontSizeToFitWidth = true
         headerContainerView.addSubview(headerTitleLabel)
         
-        containerScrollView.frame = CGRect(x: 0, y: headerHeight, width: self.view.bounds.width, height: self.view.bounds.height - headerHeight)
+        containerScrollView.frame = CGRect(x: 0, y: headerHeight, width: view.bounds.width, height: view.bounds.height - headerHeight)
         containerScrollView.contentSize = CGSize(width: containerScrollView.bounds.width * CGFloat(numberOfControllers), height: containerScrollView.bounds.height)
         containerScrollView.delegate = self
         containerScrollView.bounces = false
         containerScrollView.isPagingEnabled = true
-        self.view.addSubview(containerScrollView)
+        view.addSubview(containerScrollView)
         
         addViewControllersToPager()
-        
     }
     
     /// This function adds view controllers to
@@ -86,13 +84,12 @@ open class APFancyPagerViewController: UIViewController, UIScrollViewDelegate {
     /// parameters, does things by using the
     /// data source which is already provided.
     private func addViewControllersToPager() {
-        
         var xVal: CGFloat = 0.0
         
         for index in 0...numberOfControllers {
             let currentVC = dataSource!.fancyPagerViewController(self, viewControllerForIndex: index)
             
-            self.addChild(currentVC)
+            addChild(currentVC)
             currentVC.view.frame = CGRect(x: xVal, y: 0.0, width: containerScrollView.bounds.width, height: containerScrollView.bounds.height)
             containerScrollView.addSubview(currentVC.view)
             currentVC.willMove(toParent: self)
@@ -113,7 +110,7 @@ open class APFancyPagerViewController: UIViewController, UIScrollViewDelegate {
      - parameter animated: Should this scrolling be animated or not?
      */
     open func scrollToPage(_ pageNumber: Int, animated: Bool) {
-        if (pageNumber >= 0 && pageNumber < numberOfControllers) {
+        if pageNumber >= 0 && pageNumber < numberOfControllers {
             containerScrollView.scrollRectToVisible(CGRect(x: containerScrollView.bounds.width * CGFloat(pageNumber), y: 0.0, width: containerScrollView.bounds.width, height: containerScrollView.bounds.height), animated: animated)
         }
     }
@@ -127,7 +124,6 @@ open class APFancyPagerViewController: UIViewController, UIScrollViewDelegate {
      
      */
     private func animateHeaderTitle(_ sourceString: String, _ destinationString: String, _ percentage: CGFloat) {
-        
         let maxLetterCount = max(sourceString.count, destinationString.count)
         let changingLetterCountTreshold = 1.0 / Double(maxLetterCount)
         let indexOfCharacter = Int(floor(Double(percentage) / changingLetterCountTreshold))
@@ -137,18 +133,18 @@ open class APFancyPagerViewController: UIViewController, UIScrollViewDelegate {
         
         var newString = ""
         
-        if (indexOfCharacter >= sourceString.count) {
+        if indexOfCharacter >= sourceString.count {
             for _ in 0...(maxLetterCount - sourceString.count) {
                 tempSourceString.append(" ")
             }
-        } else if (indexOfCharacter >= destinationString.count) {
+        } else if indexOfCharacter >= destinationString.count {
             for _ in 0...(maxLetterCount - destinationString.count) {
                 tempDestinationString.append(" ")
             }
         }
         
         newString = String(tempSourceString[indexOfCharacter...(tempSourceString.count - 1)])
-        if (indexOfCharacter != 0) {
+        if indexOfCharacter != 0 {
             newString += String(tempDestinationString[0...indexOfCharacter - 1])
         }
         
@@ -162,16 +158,14 @@ open class APFancyPagerViewController: UIViewController, UIScrollViewDelegate {
      
      */
     open func scrollViewDidScroll(_ scrollView: UIScrollView) {
-
         let pageNumber = floorf(Float(scrollView.contentOffset.x / (scrollView.frame.size.width)))
         let percentageOffset = (scrollView.contentOffset.x / scrollView.frame.width) - CGFloat(pageNumber)
         
-        if (percentageOffset > 0.0) {
-            if (numberOfControllers > Int(pageNumber) + 1) {
-                
-                if (lastPercentage < percentageOffset) {
+        if percentageOffset > 0.0 {
+            if numberOfControllers > Int(pageNumber) + 1 {
+                if lastPercentage < percentageOffset {
                     delegate?.fancyPagerViewController(self, isScrollingFromIndex: Int(pageNumber), toIndex: Int(pageNumber + 1), progress: percentageOffset)
-                } else if (lastPercentage > percentageOffset) {
+                } else if lastPercentage > percentageOffset {
                     delegate?.fancyPagerViewController(self, isScrollingFromIndex: Int(pageNumber + 1), toIndex: Int(pageNumber), progress: 1.0 - percentageOffset)
                 }
                 lastPercentage = percentageOffset
@@ -185,9 +179,9 @@ open class APFancyPagerViewController: UIViewController, UIScrollViewDelegate {
                 let prevTitleString = dataSource!.fancyPagerViewController(self, headerStringForIndex: Int(pageNumber))
                 let nextTitleString = dataSource!.fancyPagerViewController(self, headerStringForIndex: Int(pageNumber + 1))
                 
-                headerContainerView.backgroundColor = UIColor.init(red: (prevBackgroundColor.rgba.red + ((nextBackgroundColor.rgba.red - prevBackgroundColor.rgba.red) * percentageOffset)), green: (prevBackgroundColor.rgba.green + ((nextBackgroundColor.rgba.green - prevBackgroundColor.rgba.green) * percentageOffset)), blue: (prevBackgroundColor.rgba.blue + ((nextBackgroundColor.rgba.blue - prevBackgroundColor.rgba.blue) * percentageOffset)), alpha: (prevBackgroundColor.rgba.alpha + ((nextBackgroundColor.rgba.alpha - prevBackgroundColor.rgba.alpha) * percentageOffset)))
+                headerContainerView.backgroundColor = UIColor(red: (prevBackgroundColor.rgba.red + ((nextBackgroundColor.rgba.red - prevBackgroundColor.rgba.red) * percentageOffset)), green: (prevBackgroundColor.rgba.green + ((nextBackgroundColor.rgba.green - prevBackgroundColor.rgba.green) * percentageOffset)), blue: (prevBackgroundColor.rgba.blue + ((nextBackgroundColor.rgba.blue - prevBackgroundColor.rgba.blue) * percentageOffset)), alpha: (prevBackgroundColor.rgba.alpha + ((nextBackgroundColor.rgba.alpha - prevBackgroundColor.rgba.alpha) * percentageOffset)))
                 
-                headerTitleLabel.textColor = UIColor.init(red: (prevTitleColor.rgba.red + ((nextTitleColor.rgba.red - prevTitleColor.rgba.red) * percentageOffset)), green: (prevTitleColor.rgba.green + ((nextTitleColor.rgba.green - prevTitleColor.rgba.green) * percentageOffset)), blue: (prevTitleColor.rgba.blue + ((nextTitleColor.rgba.blue - prevTitleColor.rgba.blue) * percentageOffset)), alpha: (prevTitleColor.rgba.alpha + ((nextTitleColor.rgba.alpha - prevTitleColor.rgba.alpha) * percentageOffset)))
+                headerTitleLabel.textColor = UIColor(red: (prevTitleColor.rgba.red + ((nextTitleColor.rgba.red - prevTitleColor.rgba.red) * percentageOffset)), green: (prevTitleColor.rgba.green + ((nextTitleColor.rgba.green - prevTitleColor.rgba.green) * percentageOffset)), blue: (prevTitleColor.rgba.blue + ((nextTitleColor.rgba.blue - prevTitleColor.rgba.blue) * percentageOffset)), alpha: (prevTitleColor.rgba.alpha + ((nextTitleColor.rgba.alpha - prevTitleColor.rgba.alpha) * percentageOffset)))
                 
                 animateHeaderTitle(prevTitleString, nextTitleString, percentageOffset)
             }
@@ -221,5 +215,4 @@ open class APFancyPagerViewController: UIViewController, UIScrollViewDelegate {
         
         delegate?.fancyPagerViewController(self, didScrollToIndex: Int(pageNumber))
     }
-
 }

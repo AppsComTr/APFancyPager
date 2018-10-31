@@ -6,8 +6,8 @@
 //  Copyright © 2018 Apps. All rights reserved.
 //
 
-import UIKit
 import APFancyPager
+import UIKit
 
 class ViewController: APFancyPagerViewController, APFancyPagerDelegate, APFancyPagerDataSource {
     override func viewDidLoad() {
@@ -32,20 +32,20 @@ class ViewController: APFancyPagerViewController, APFancyPagerDelegate, APFancyP
         let viewController = UIViewController()
         let button = UIButton(frame: CGRect(x: 0.0, y: 0.0, width: 100.0, height: 100.0))
         button.center = viewController.view.center
-        if (index == 0) {
+        if index == 0 {
             button.backgroundColor = UIColor.blue
             button.tag = 1
-        } else if (index == 1) {
+        } else if index == 1 {
             button.backgroundColor = UIColor.red
             button.tag = 2
-        } else if (index == 2) {
+        } else if index == 2 {
             button.backgroundColor = UIColor.green
             button.tag = 3
-        } else if (index == 3) {
+        } else if index == 3 {
             button.backgroundColor = UIColor.orange
             button.tag = 0
         }
-        button.addTarget(self, action: #selector(buttonClicked(_:)), for: .touchUpInside)
+        button.addTarget(self, action: #selector(self.buttonClicked(_:)), for: .touchUpInside)
         viewController.view.addSubview(button)
         return viewController
     }
@@ -111,7 +111,4 @@ class ViewController: APFancyPagerViewController, APFancyPagerDelegate, APFancyP
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    
 }
-
