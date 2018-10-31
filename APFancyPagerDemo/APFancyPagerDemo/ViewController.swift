@@ -28,7 +28,8 @@ class ViewController: APFancyPagerViewController, APFancyPagerDelegate, APFancyP
         return 100.0
     }
     
-    func fancyPagerViewController(_ fancyPagerViewController: APFancyPagerViewController, viewControllerForIndex index: Int) -> UIViewController {
+    func fancyPagerViewController(_ fancyPagerViewController: APFancyPagerViewController,
+                                  viewControllerForIndex index: Int) -> UIViewController {
         let viewController = UIViewController()
         let button = UIButton(frame: CGRect(x: 0.0, y: 0.0, width: 100.0, height: 100.0))
         button.center = viewController.view.center
@@ -50,7 +51,8 @@ class ViewController: APFancyPagerViewController, APFancyPagerDelegate, APFancyP
         return viewController
     }
     
-    func fancyPagerViewController(_ fancyPagerViewController: APFancyPagerViewController, headerStringForIndex index: Int) -> String {
+    func fancyPagerViewController(_ fancyPagerViewController: APFancyPagerViewController,
+                                  headerStringForIndex index: Int) -> String {
         switch index {
         case 0:
             return "Wow really?"
@@ -65,7 +67,8 @@ class ViewController: APFancyPagerViewController, APFancyPagerDelegate, APFancyP
         }
     }
     
-    func fancyPagerViewController(_ fancyPagerViewController: APFancyPagerViewController, headerTextColorForIndex index: Int) -> UIColor {
+    func fancyPagerViewController(_ fancyPagerViewController: APFancyPagerViewController,
+                                  headerTextColorForIndex index: Int) -> UIColor {
         switch index {
         case 0:
             return UIColor.orange
@@ -80,7 +83,8 @@ class ViewController: APFancyPagerViewController, APFancyPagerDelegate, APFancyP
         }
     }
     
-    func fancyPagerViewController(_ fancyPagerViewController: APFancyPagerViewController, headerBackgroundColorForIndex index: Int) -> UIColor {
+    func fancyPagerViewController(_ fancyPagerViewController: APFancyPagerViewController,
+                                  headerBackgroundColorForIndex index: Int) -> UIColor {
         switch index {
         case 0:
             return UIColor.blue
@@ -95,11 +99,13 @@ class ViewController: APFancyPagerViewController, APFancyPagerDelegate, APFancyP
         }
     }
     
-    func fancyPagerViewController(_ fancyPagerViewController: APFancyPagerViewController, didScrollToIndex index: Int) {
+    func fancyPagerViewController(_ fancyPagerViewController: APFancyPagerViewController,
+                                  didScrollToIndex index: Int) {
         print("DidScroll: \(index)")
     }
     
-    func fancyPagerViewController(_ fancyPagerViewController: APFancyPagerViewController, isScrollingFromIndex fromIndex: Int, toIndex: Int, progress: CGFloat) {
+    func fancyPagerViewController(_ fancyPagerViewController: APFancyPagerViewController,
+                                  isScrollingFromIndex fromIndex: Int, toIndex: Int, progress: CGFloat) {
         print("IsScrolling: \(fromIndex) to: \(toIndex) WithProgress: \(progress)")
     }
     

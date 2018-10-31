@@ -1,4 +1,3 @@
-
 # APFancyPager
 A fancy pager view controller framework for Swift/Objective-C
 
@@ -44,7 +43,7 @@ func heightForHeader(_ fancyPagerViewController: APFancyPagerViewController) -> 
 
 You should return related view controller into pages by using
 ```swift
-fancyPagerViewController(_ fancyPagerViewController: APFancyPagerViewController, viewControllerForIndex index: Int) -> UIViewController
+func fancyPagerViewController(_ fancyPagerViewController: APFancyPagerViewController, viewControllerForIndex index: Int) -> UIViewController
 ```
 Just return your view controller for related index.
 
