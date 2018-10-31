@@ -10,7 +10,6 @@ import UIKit
 
 /// Data source protocol for APFancyPager
 @objc public protocol APFancyPagerDataSource: class {
-    
     /**
         You should implement this function in order to tell the number of your view controllers that will be used in the APFancyPager.
      - parameter fancyPagerViewController: APFancyPagerViewController object of currently using.
@@ -62,5 +61,4 @@ import UIKit
      - returns: Header text color of the given index of the APFancyPager
      */
     func fancyPagerViewController(_ fancyPagerViewController: APFancyPagerViewController, headerTextColorForIndex index: Int) -> UIColor
-    
 }

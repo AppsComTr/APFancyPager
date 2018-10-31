@@ -10,7 +10,6 @@ import UIKit
 
 /// Delegate protocol for APFancyPager
 @objc public protocol APFancyPagerDelegate: class {
-    
     /**
      You can implement this function in order to get information while the user is scrolling through the APFancyPager.
      - parameter fancyPagerViewController: APFancyPagerViewController object of currently using.
@@ -29,7 +28,6 @@ import UIKit
 }
 
 public extension APFancyPagerDelegate {
-    
     public func fancyPagerViewController(_ fancyPagerViewController: APFancyPagerViewController, isScrollingFromIndex fromIndex: Int, toIndex: Int, progress: CGFloat) {
         return
     }
