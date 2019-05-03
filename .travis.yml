@@ -1,4 +1,6 @@
+osx_image: xcode10.2
+os: osx
 language: swift
 xcode_project: APFancyPagerDemo/APFancyPagerDemo.xcodeproj
 xcode_scheme: APFancyPagerDemoUITests
-xcode_destination: platform=iOS Simulator,OS=11.4,name=iPhone X
+xcode_destination: platform=iOS Simulator,OS=12.2,name=iPhone X
