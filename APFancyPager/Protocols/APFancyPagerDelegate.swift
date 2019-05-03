@@ -38,12 +38,12 @@ import UIKit
 }
 
 public extension APFancyPagerDelegate {
-    public func fancyPagerViewController(_ fancyPagerViewController: APFancyPagerViewController,
+    func fancyPagerViewController(_ fancyPagerViewController: APFancyPagerViewController,
                                          isScrollingFromIndex fromIndex: Int, toIndex: Int, progress: CGFloat) {
         return
     }
     
-    public func fancyPagerViewController(_ fancyPagerViewController: APFancyPagerViewController,
+    func fancyPagerViewController(_ fancyPagerViewController: APFancyPagerViewController,
                                          didScrollToIndex index: Int) {
         return
     }

@@ -14,7 +14,18 @@
 		4115EE2B21397FE80099991F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4115EE2921397FE80099991F /* LaunchScreen.storyboard */; };
 		4115EE3B213981430099991F /* APFancyPager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4115EE3A213981420099991F /* APFancyPager.framework */; };
 		4115EE3C213981430099991F /* APFancyPager.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4115EE3A213981420099991F /* APFancyPager.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4139948E227C2FF300C616F0 /* APFancyPagerDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4139948D227C2FF300C616F0 /* APFancyPagerDemoUITests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		41399490227C2FF300C616F0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4115EE1521397FE70099991F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4115EE1C21397FE70099991F;
+			remoteInfo = APFancyPagerDemo;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		4115EE36213980860099991F /* Embed Frameworks */ = {
@@ -39,6 +50,9 @@
 		4115EE2A21397FE80099991F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4115EE2C21397FE80099991F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4115EE3A213981420099991F /* APFancyPager.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = APFancyPager.framework; path = APFancyPagerDemo/APFancyPager.framework; sourceTree = "<group>"; };
+		4139948B227C2FF300C616F0 /* APFancyPagerDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = APFancyPagerDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4139948D227C2FF300C616F0 /* APFancyPagerDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APFancyPagerDemoUITests.swift; sourceTree = "<group>"; };
+		4139948F227C2FF300C616F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +64,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		41399488227C2FF300C616F0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -58,6 +79,7 @@
 			children = (
 				4115EE3A213981420099991F /* APFancyPager.framework */,
 				4115EE1F21397FE70099991F /* APFancyPagerDemo */,
+				4139948C227C2FF300C616F0 /* APFancyPagerDemoUITests */,
 				4115EE1E21397FE70099991F /* Products */,
 				4115EE37213980B20099991F /* Frameworks */,
 			);
@@ -67,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				4115EE1D21397FE70099991F /* APFancyPagerDemo.app */,
+				4139948B227C2FF300C616F0 /* APFancyPagerDemoUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -91,6 +114,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		4139948C227C2FF300C616F0 /* APFancyPagerDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4139948D227C2FF300C616F0 /* APFancyPagerDemoUITests.swift */,
+				4139948F227C2FF300C616F0 /* Info.plist */,
+			);
+			path = APFancyPagerDemoUITests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -112,18 +144,40 @@
 			productReference = 4115EE1D21397FE70099991F /* APFancyPagerDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
+		4139948A227C2FF300C616F0 /* APFancyPagerDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 41399492227C2FF300C616F0 /* Build configuration list for PBXNativeTarget "APFancyPagerDemoUITests" */;
+			buildPhases = (
+				41399487227C2FF300C616F0 /* Sources */,
+				41399488227C2FF300C616F0 /* Frameworks */,
+				41399489227C2FF300C616F0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				41399491227C2FF300C616F0 /* PBXTargetDependency */,
+			);
+			name = APFancyPagerDemoUITests;
+			productName = APFancyPagerDemoUITests;
+			productReference = 4139948B227C2FF300C616F0 /* APFancyPagerDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		4115EE1521397FE70099991F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0940;
+				LastSwiftUpdateCheck = 1020;
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = Apps;
 				TargetAttributes = {
 					4115EE1C21397FE70099991F = {
 						CreatedOnToolsVersion = 9.4.1;
+					};
+					4139948A227C2FF300C616F0 = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = 4115EE1C21397FE70099991F;
 					};
 				};
 			};
@@ -141,6 +195,7 @@
 			projectRoot = "";
 			targets = (
 				4115EE1C21397FE70099991F /* APFancyPagerDemo */,
+				4139948A227C2FF300C616F0 /* APFancyPagerDemoUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -156,6 +211,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		41399489227C2FF300C616F0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -168,7 +230,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		41399487227C2FF300C616F0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4139948E227C2FF300C616F0 /* APFancyPagerDemoUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		41399491227C2FF300C616F0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4115EE1C21397FE70099991F /* APFancyPagerDemo */;
+			targetProxy = 41399490227C2FF300C616F0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		4115EE2421397FE70099991F /* Main.storyboard */ = {
@@ -308,8 +386,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = PP2W8XD946;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/APFancyPagerDemo",
@@ -322,7 +401,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = tr.com.apps.APFancyPagerDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -331,8 +411,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = PP2W8XD946;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/APFancyPagerDemo",
@@ -345,8 +426,52 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = tr.com.apps.APFancyPagerDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		41399493227C2FF300C616F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FBVGK9P3T9;
+				INFOPLIST_FILE = APFancyPagerDemoUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = tr.com.apps.APFancyPagerDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = APFancyPagerDemo;
+			};
+			name = Debug;
+		};
+		41399494227C2FF300C616F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FBVGK9P3T9;
+				INFOPLIST_FILE = APFancyPagerDemoUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = tr.com.apps.APFancyPagerDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = APFancyPagerDemo;
 			};
 			name = Release;
 		};
@@ -367,6 +492,15 @@
 			buildConfigurations = (
 				4115EE3021397FE80099991F /* Debug */,
 				4115EE3121397FE80099991F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		41399492227C2FF300C616F0 /* Build configuration list for PBXNativeTarget "APFancyPagerDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				41399493227C2FF300C616F0 /* Debug */,
+				41399494227C2FF300C616F0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

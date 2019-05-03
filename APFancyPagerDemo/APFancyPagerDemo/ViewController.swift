@@ -14,13 +14,14 @@ class ViewController: APFancyPagerViewController, APFancyPagerDelegate, APFancyP
         self.dataSource = self
         self.delegate = self
         super.viewDidLoad()
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
     }
     
-    func numberOfViewControllers(in fancyPagerViewController: APFancyPagerViewController) -> Int {
+    func numberOfViewControllers(_ fancyPagerViewController: APFancyPagerViewController) -> Int {
         return 4
     }
     
@@ -36,15 +37,19 @@ class ViewController: APFancyPagerViewController, APFancyPagerDelegate, APFancyP
         if index == 0 {
             button.backgroundColor = UIColor.blue
             button.tag = 1
+            button.accessibilityIdentifier = "BlueButton"
         } else if index == 1 {
             button.backgroundColor = UIColor.red
             button.tag = 2
+            button.accessibilityIdentifier = "RedButton"
         } else if index == 2 {
             button.backgroundColor = UIColor.green
             button.tag = 3
+            button.accessibilityIdentifier = "GreenButton"
         } else if index == 3 {
             button.backgroundColor = UIColor.orange
             button.tag = 0
+            button.accessibilityIdentifier = "OrangeButton"
         }
         button.addTarget(self, action: #selector(self.buttonClicked(_:)), for: .touchUpInside)
         viewController.view.addSubview(button)
