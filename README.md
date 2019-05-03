@@ -2,6 +2,7 @@
 A fancy pager view controller framework for Swift/Objective-C
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/88b5da03f40f4b1daf7f14343606a998)](https://app.codacy.com/app/mertsimsek/APFancyPager?utm_source=github.com&utm_medium=referral&utm_content=AppsComTr/APFancyPager&utm_campaign=Badge_Grade_Dashboard)
+[![Build Status](https://travis-ci.org/AppsComTr/APFancyPager.svg?branch=master)](https://travis-ci.org/AppsComTr/APFancyPager)
 [![Platform](https://img.shields.io/cocoapods/p/APFancyPager.svg)](https://github.com/AppsComTr/APFancyPager)
 [![CocoaPods](https://img.shields.io/cocoapods/v/APFancyPager.svg)](https://cocoapods.org/pods/APFancyPager)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
